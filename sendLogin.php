@@ -1,6 +1,3 @@
-<script src="/js/login.js"></script>
-
-
 <?php
 $user = $_POST['user'];
 $password = $_POST['password'];
@@ -28,3 +25,5 @@ if ($rs) {
 } else {
     echo "<br>Usuario incorreto";
 }
+
+?>
