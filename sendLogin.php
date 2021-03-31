@@ -18,7 +18,7 @@ if ($rs) {
     pg_close($conn);
     // verifica se a senha confere com a informada
     if ($arr[0] == $password) {
-        header('Location: /index.php');
+        header('Location: /index.html');
     } else {
         echo "<br>Senha incorreta!";
     }

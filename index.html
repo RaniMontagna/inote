@@ -8,6 +8,9 @@
     <meta name="theme-color" content="#000000" />
     <meta name="INote" content="Site para você se organizar e não esquecer de mais nenhuma tarefa." />
 
+    <!-- FaviIcon -->
+    <link rel="icon" href="images/inoteLogo1.png" />
+
     <!-- Css -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
@@ -26,11 +29,10 @@
             <h2> Pessoais</h2>
         </div>
         <div class="add">
-            <form>
-                <input type="text" name="add" id="add" placeholder="Adicionar uma anotação">
+            <form action="/sendNote.php" method="post">
+                <input type="text" name="note" id="note" placeholder="Adicionar uma anotação" required>
                 <button type="submit">Adicionar</button>
             </form>
-            </>
         </div>
         <div class="show">
 

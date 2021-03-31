@@ -8,33 +8,40 @@
     <meta name="theme-color" content="#000000" />
     <meta name="INote" content="Site para você se organizar e não esquecer de mais nenhuma tarefa." />
 
-    <!-- Css -->
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <!-- FaviIcon -->
+    <link rel="icon" href="images/inoteLogo1.png" />
 
-    <title>INote | Login</title>
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+
+    <title>INote | Cadastro</title>
 </head>
 
 <body>
 
-    <div class="login">
+    <div class="register">
 
         <img src="./images/inoteLogo2.png">
 
-        <h1>Faça seu login</h1>
+        <h1>Registre-se</h1>
 
-        <form action="/sendLogin.php" method="post">
+        <form method="post" action="/sendRegister.php" onsubmit="return validarRegister();">
             <label for="user">Usuário</label>
             <input type="text" name="user" id="user" placeholder="username" required />
+
+            <class class="userAlready" id="userAlready" style="display: none">
+                <p>Esse nome de usuário ja existe.</p>
+            </class>
 
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="1234" required />
 
-            <button type="submit" class="btn-grad">Entrar</button>
-
-            <div class="register">
-                <p>Você não está cadastrado?</p><a href="/register.php">Clique aqui</a>
-            </div>
+            <button type="submit" class="btn-grad">Registrar</button>
         </form>
+
+        <div class="cancel">
+            <a href="/login.html">Voltar a tela de login</a>
+        </div>
     </div>
 
 </body>
