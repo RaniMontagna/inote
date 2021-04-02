@@ -29,18 +29,33 @@
             <label for="user">Usuário</label>
             <input type="text" name="user" id="user" placeholder="username" required />
 
-            <class class="userAlready" id="userAlready" style="display: none">
-                <p>Esse nome de usuário ja existe.</p>
-            </class>
+            <?php
+            session_start();
+            if (@$_SESSION['userRegistered'] == 1) {
+                echo "<div> <p> Usuário informado ja está cadastrado no sistema! </p> </div>";
+            }
+            ?>
 
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="1234" required />
+
+            <?php
+            if (@$_SESSION['passwordLength'] == 1) {
+                echo "<div> <p> Informe uma senha com no mínimo 8 caracteres! </p> </div>";
+            }
+            ?>
+
+            <?php
+            if (@$_SESSION['registerSuccess'] == 1) {
+                echo "<div> <p> Usuário cadastrado com sucesso! </p> </div>";
+            }
+            ?>
 
             <button type="submit" class="btn-grad">Registrar</button>
         </form>
 
         <div class="cancel">
-            <a href="/login.html">Voltar a tela de login</a>
+            <a href="/login.php">Voltar a tela de login</a>
         </div>
     </div>
 

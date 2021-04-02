@@ -1,4 +1,5 @@
 <?php
+
 $user = $_POST['user'];
 $password = $_POST['password'];
 
@@ -14,16 +15,38 @@ if ($rs) {
     // recupera o valor contido na pesquisa
     $arr = pg_fetch_array($searchedPassword, 0, PGSQL_NUM);
 
-    // encerra a conexão
-    pg_close($conn);
     // verifica se a senha confere com a informada
     if ($arr[0] == $password) {
-        header('Location: /index.html');
+
+        //pesquisa o id do usuario
+        $searchId = "SELECT id FROM Usuarios WHERE nome = '$user'";
+        $searchedId = pg_query($conn, $searchId);
+        // recupera o valor contido na pesquisa
+        $id = pg_fetch_array($searchedId, 0, PGSQL_NUM);
+
+        session_start();
+        /*session is started if you don't write this line can't use $_Session  global variable*/
+        $_SESSION["idUsuario"]=$id[0];;
+        $_SESSION["usuarioIncorreto"]=0;
+        $_SESSION["senhaIncorreta"]=0;
+
+        header('Location: /index.php');
     } else {
-        echo "<br>Senha incorreta!";
+        session_start();
+        /*session is started if you don't write this line can't use $_Session  global variable*/
+        $keyPass = 1;
+        $_SESSION["senhaIncorreta"]=$keyPass;
+        $_SESSION["usuarioIncorreto"]=0;
+
+        header('Location: /login.php');
     }
 } else {
-    echo "<br>Usuario incorreto";
-}
+    session_start();
+    /*session is started if you don't write this line can't use $_Session  global variable*/
+    $keyUser = 1;
+    $_SESSION["usuarioIncorreto"]=$keyUser;
+    $_SESSION["senhaIncorreta"]=0;
 
+    header('Location: /login.php');
+}
 ?>

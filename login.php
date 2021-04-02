@@ -29,13 +29,26 @@
             <label for="user">Usuário</label>
             <input type="text" name="user" id="user" placeholder="username" required />
 
+            <?php
+                session_start();
+                if (@$_SESSION['usuarioIncorreto'] == 1) {
+                    echo "<div> <p> Usuário informado é inválido! </p> </div>";
+                }
+            ?>
+
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="1234" required />
+
+            <?php
+                if (@$_SESSION['senhaIncorreta'] == 1) {
+                    echo "<div> <p> A senha informada está incorreta! </p> </div>";
+                }
+            ?>
 
             <button type="submit" class="btn-grad">Entrar</button>
 
             <div class="register">
-                <p>Você não está cadastrado?</p><a href="/register.html">Clique aqui</a>
+                <p>Você não está cadastrado?</p><a href="/register.php">Clique aqui</a>
             </div>
         </form>
     </div>
