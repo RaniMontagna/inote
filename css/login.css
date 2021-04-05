@@ -1,10 +1,11 @@
 * {
-    padding:0;
-    margin:0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-body, html {
+body,
+html {
     height: 100%;
 }
 
@@ -31,8 +32,8 @@ div.register {
 }
 
 img {
-    width: 30vh; 
-    margin-bottom: 10px;  
+    width: 30vh;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -58,27 +59,29 @@ input {
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
 }
+
 .btn-grad {
-   margin: 10px;
-   padding: 1.5vh 5vh;
-   text-align: center;
-   text-transform: uppercase;
-   background-size: 200% auto;
-   color: white;            
-   border-radius: 10px;
-   display: block;
-   border: 0px;
- }
+    margin: 10px;
+    padding: 1.5vh 5vh;
+    text-align: center;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+}
 
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
 
- div.register a {
+div.register a {
     margin-left: 5px;
     text-decoration: none;
     color: purple;
@@ -91,4 +94,12 @@ input {
         width: 90%;
         height: 90%;
     }
+}
+
+/* Divs de error */
+
+div.messageError {
+    background-color: #ff9999;
+    border-radius: 10px;
+    padding: 10px 20px;
 }

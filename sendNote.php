@@ -15,5 +15,5 @@ $insertingNote = pg_query($conn, $insertNote);
 pg_close($conn);
 
 // atualiza a pagina
-header('Location: /index.php');
+header('Location: view/index.php');
 ?>

@@ -17,21 +17,52 @@ body {
 
 /* Css para o cabeçalho */
 
-div.navBar {
-    background-color: white;
+div.navBar div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 130px;
 }
 
-div.navBar h1 {
+div.navBar div h1 {
     font-weight: 300;
     font-size: 1.8em;
 }
 
-div.navBar img {
+div.navBar div img {
     width: 100px;
+}
+
+div.navBar {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    background-color: white;
+    align-items: center;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%)
+}
+
+.btn-grad {
+    text-decoration: none;
+    font-size: 1em;
+    padding: 15px 55px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 100% auto;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Css para o conteúdo abaixo do cabeçalho */
@@ -80,6 +111,7 @@ div.add input {
     border: none;
     width: 800px;
     padding: 10px;
+    margin-right: 5px;
 }
 
 div.add button {
@@ -116,3 +148,28 @@ div.add button {
 }
 
 /* Css para parte de mostrar anotações */
+
+table {
+    margin: 20px;
+}
+
+table th {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: left;
+}
+
+table th.anotacoes {
+    width: 80vh;
+}
+
+td.note {
+    font-weight: 700;
+}
+
+button.actions {
+    padding: 5px 30px;
+    border-radius: 10px; 
+    border: none;
+    margin: 5px 1px;
+}

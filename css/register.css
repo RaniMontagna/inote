@@ -88,3 +88,17 @@ input {
         height: 90%;
     }
 }
+
+/* Divs de error */
+
+div.messageError {
+    background-color: #ff9999;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+div.success {
+    background-color: #99ffbb;
+    border-radius: 10px;
+    padding: 10px 20px;
+}

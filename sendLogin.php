@@ -30,7 +30,7 @@ if ($rs) {
         $_SESSION["usuarioIncorreto"]=0;
         $_SESSION["senhaIncorreta"]=0;
 
-        header('Location: /index.php');
+        header('Location: view/index.php');
     } else {
         session_start();
         /*session is started if you don't write this line can't use $_Session  global variable*/
@@ -38,7 +38,7 @@ if ($rs) {
         $_SESSION["senhaIncorreta"]=$keyPass;
         $_SESSION["usuarioIncorreto"]=0;
 
-        header('Location: /login.php');
+        header('Location: view/login.php');
     }
 } else {
     session_start();
@@ -47,6 +47,6 @@ if ($rs) {
     $_SESSION["usuarioIncorreto"]=$keyUser;
     $_SESSION["senhaIncorreta"]=0;
 
-    header('Location: /login.php');
+    header('Location: view/login.php');
 }
 ?>

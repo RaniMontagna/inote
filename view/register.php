@@ -9,10 +9,10 @@
     <meta name="INote" content="Site para você se organizar e não esquecer de mais nenhuma tarefa." />
 
     <!-- FaviIcon -->
-    <link rel="icon" href="images/inoteLogo1.png" />
+    <link rel="icon" href="../images/inoteLogo1.png" />
 
     <!-- Css -->
-    <link rel="stylesheet" type="text/css" href="/css/register.css">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
 
     <title>INote | Cadastro</title>
 </head>
@@ -21,18 +21,18 @@
 
     <div class="register">
 
-        <img src="./images/inoteLogo2.png">
+        <img src="../images/inoteLogo2.png">
 
         <h1>Registre-se</h1>
 
-        <form method="post" action="/sendRegister.php" onsubmit="return validarRegister();">
+        <form method="post" action="../sendRegister.php" onsubmit="return validarRegister();">
             <label for="user">Usuário</label>
             <input type="text" name="user" id="user" placeholder="username" required />
 
             <?php
             session_start();
             if (@$_SESSION['userRegistered'] == 1) {
-                echo "<div> <p> Usuário informado ja está cadastrado no sistema! </p> </div>";
+                echo "<div class='messageError'> <p> Usuário informado ja está cadastrado no sistema! </p> </div>";
             }
             ?>
 
@@ -41,13 +41,13 @@
 
             <?php
             if (@$_SESSION['passwordLength'] == 1) {
-                echo "<div> <p> Informe uma senha com no mínimo 8 caracteres! </p> </div>";
+                echo "<div class='messageError'> <p> Informe uma senha com no mínimo 8 caracteres! </p> </div>";
             }
             ?>
 
             <?php
             if (@$_SESSION['registerSuccess'] == 1) {
-                echo "<div> <p> Usuário cadastrado com sucesso! </p> </div>";
+                echo "<div class='success'> <p> Usuário cadastrado com sucesso! </p> </div>";
             }
             ?>
 
@@ -55,7 +55,7 @@
         </form>
 
         <div class="cancel">
-            <a href="/login.php">Voltar a tela de login</a>
+            <a href="../headerLogin.php">Voltar a tela de login</a>
         </div>
     </div>
 
