@@ -80,13 +80,17 @@
                     $arr = pg_fetch_array($searchedNotes, $i, PGSQL_NUM); ?>
                     <tr>
                         <td class="note"><?php echo "$arr[0]" ?></td>
-                        <td><button class="actions">Excluir</button></td>
-                        <!-- <td><button class="actions">Concluido</button></td> -->
+                        <form method="post" action="../deleteNote.php">
+                            <input type='hidden' name='note' value='<?php echo "$arr[0]" ?>'>
+                            <td><button class="actions" type="submit">Excluir</button></td>
+                        </form>
                     </tr>
                 <?php } ?>
             </table>
         </div>
     </div>
+
+    <!-- onclick="window.location.href = '../deleteNote.php' -->
 
 
 

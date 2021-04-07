@@ -121,6 +121,11 @@ div.add button {
     border: none;
 }
 
+div.add button:hover {
+    background-color: gray;
+    color: white;
+}
+
 @media (max-width: 768px) {
     div.add input {
         margin-left: 10px;
@@ -172,4 +177,9 @@ button.actions {
     border-radius: 10px; 
     border: none;
     margin: 5px 1px;
+}
+
+button.actions:hover {
+    background-color: gray;
+    color: white;
 }

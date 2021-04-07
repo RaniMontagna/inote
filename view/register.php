@@ -25,7 +25,7 @@
 
         <h1>Registre-se</h1>
 
-        <form method="post" action="../sendRegister.php" onsubmit="return validarRegister();">
+        <form method="post" action="../sendRegister.php">
             <label for="user">Usuário</label>
             <input type="text" name="user" id="user" placeholder="username" required />
 
