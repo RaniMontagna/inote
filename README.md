@@ -1,4 +1,4 @@
-# inote
+# INote
 Site de anotações pesssoal - Trabalho Engenharia de Software II
 
 Integrantes:
