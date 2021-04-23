@@ -6,6 +6,15 @@ Ranielli - 182746
 Bernardo - 182715
 João - 182741
 
+Instruções do projeto:
+
+Os arquivos de documentação pedidos estão dentro da pasta chamada "Documentação" organizados por número.
+O vídeo que foi pedido está neste link: https://drive.google.com/file/d/1hld_TRWFR65CStW3LA3PnxtsPmDgrGvN/view?usp=sharing
+Para fazer a instalação do sistema na sua máquina. Somente fazer o download e iniciar um servidor localhost via php e acessar o endereço: http://localhost:9999/view/login.php
+Se preferir, você pode acessar o sistema também através do link da hospedagem no aws, no endereço: http://54.232.17.112/view/login.php
+
+Breve explicação do projeto:
+
 •	O projeto consiste na construção de um software de organização pessoal baseado em um sistema de anotações.
 
 •	A solução deverá permitir ao usuário a inserção e exclusão de anotações por meio de um sistema totalmente online.
@@ -23,5 +32,3 @@ João - 182741
 •	O sistema deve ser homologado para uso com Windows, MacOs, Linux, Android e Ios.
 
 •	O banco de dados a ser utilizado deve ser Postgres.
-
-Para fazer a instalação do sistema na sua máquina. Somente fazer o download e iniciar um servidor localhost via php e acessar o endereço: http://localhost:9999/view/login.php
