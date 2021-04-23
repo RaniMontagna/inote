@@ -13,7 +13,6 @@
 
     <!-- Css -->
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-
     <title>INote | Bem-vindo!</title>
 </head>
 
