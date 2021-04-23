@@ -23,3 +23,5 @@ João - 182741
 •	O sistema deve ser homologado para uso com Windows, MacOs, Linux, Android e Ios.
 
 •	O banco de dados a ser utilizado deve ser Postgres.
+
+Para fazer a instalação do sistema na sua máquina. Somente fazer o download e iniciar um servidor localhost via php e acessar o endereço: http://localhost:9999/view/login.php
